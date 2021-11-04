@@ -664,7 +664,7 @@ endif()
 message(STATUS "using asm source   : ${ASMSRC}")
 source_group(ASM FILES ${ASMSRC})
 add_library(x264-asm OBJECT ${ASMSRC})
-set_target_properties(x264-asm PROPERTIES COMPILE_FLAGS ${ASM_FLAGS})
+set_target_properties(x264-asm PROPERTIES COMPILE_FLAGS "${ASM_FLAGS}")
 
 #on Windows we need to call yasm manually :(
 if(MSVC AND NOT ${FORCE_NASM})
